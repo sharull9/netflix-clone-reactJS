@@ -1,0 +1,32 @@
+.row {
+    &_tilte {
+        height: 200px;
+        text-align: left;
+    }
+
+    &_posters {
+        display: flex;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+    &_poster{
+        max-width: 200px;
+        object-fit: contain;
+        transition: transform 450ms;
+        &:hover{
+            transform: scale(1.05);
+        }
+        &:not(last-child){
+            margin-right: 10px;
+        }
+        &Large{
+            max-height: 600px;
+            &:hover {
+                    transform: scale(1.08);
+                }
+        }
+    }
+}
